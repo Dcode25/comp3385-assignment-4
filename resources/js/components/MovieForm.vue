@@ -20,13 +20,14 @@ const errorMessages = ref([]);
             return response.json();
         })
         .then(function (data) {
+            movieForm.reset();
             router.push({path: '/movies'});
         })
         .catch(function (error) {
             
             console.log(error);
         });
-        movieForm.reset();
+        
     }
 
 </script>
