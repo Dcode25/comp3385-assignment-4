@@ -26,6 +26,7 @@ const errorMessages = ref([]);
             
             console.log(error);
         });
+        movieForm.reset();
     }
 
 </script>

@@ -10,7 +10,7 @@ function fetchMovies() {
                 'Content-Type': 'application/json'
             }
         })
-        .then((response) => response.json())
+        .then(async (response) => response.json())
         .then((data) => {
             console.log(data);
             movies.value = data.movies;
@@ -35,7 +35,7 @@ onMounted(() => fetchMovies())
 
                 <div class="col-md-6">
                     <div class="card-body">
-                        <p class="card-text">{{ movie.title}}</p>
+                        <p class="card-text fw-bold">{{ movie.title}}</p>
                         <p class="card-text">{{ movie.description}}</p>
 
                     </div>
